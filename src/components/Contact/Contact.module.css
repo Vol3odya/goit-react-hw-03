@@ -1,0 +1,19 @@
+.cart{
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 84px;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+}
+
+.text{}
+
+.button{
+  border: 1px solid black;
+  height: 40px;
+  padding: 8px;
+}
