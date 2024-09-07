@@ -29,29 +29,33 @@ export default function App() {
     setText(newText);
   };
 
-  const find = () => {
-    if (text == '') {
-      return data;
-    }
-    else {
-      return data.filter(item => item.name.toLowerCase().includes(text.toLowerCase()));
-    }
-    
-  }
-
-  const [data, setData] = useState(clicks);
+  //const [data, setData] = useState(clicks);
+  
+  
   const addUser = (newUser) => {
-    setData((prevTask) => {
-      setClicks([...prevTask, newUser]);
+    {/*setData((prevTask) => {
       return [...prevTask, newUser];
+    });*/}
+    setClicks((prevData) => {
+      return [...prevData, newUser];
     });
   };
 
   const deleteData = (id) => {
-    setData((prevTask) => {
-      setClicks(prevTask.filter((task) => task.id !== id));
+    setClicks((prevTask) => {
+      //setClicks(prevTask.filter((task) => task.id !== id));
       return prevTask.filter((task) => task.id !== id);
     })
+  }
+
+  const find = () => {
+    if (text == '') {
+      return clicks;
+    }
+    else {
+      return clicks.filter(item => item.name.toLowerCase().includes(text.toLowerCase()));
+    }
+    
   }
 
   return (
